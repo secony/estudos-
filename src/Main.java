@@ -4,19 +4,32 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Digite a senha: ");
-        int senha = input.nextInt();
-        input.nextLine();
+        System.out.print("Digite o X: ");
+        int x = input.nextInt();
+        System.out.print("Digite o Y: ");
+        int y = input.nextInt();
 
-        int senhaCorreta = 2002;
+        while (x != 0 && y != 0) {
 
-        while (senha != senhaCorreta) {
 
-            System.out.println("Senha Inválida");
-            System.out.print("Digite a senha: ");
-            senha = input.nextInt();
+            if (x > 0 && y > 0) {
+                System.out.println("primeiro");
+            }
+            else if (x > 0 && y < 0) {
+                System.out.println("quarto");
+            }
+            else if (x < 0 && y < 0) {
+                System.out.println("terceiro");
+            }
+            else {
+                System.out.println("segundo");
+            }
+
+                System.out.print("Digite o X: ");
+                x = input.nextInt();
+                System.out.print("Digite o Y: ");
+                y = input.nextInt();
+
         }
-
-        System.out.println("Senha Correta");
     }
 }
