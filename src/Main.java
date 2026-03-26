@@ -5,29 +5,46 @@ public class Main {
     static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Digite o X: ");
-        int x = input.nextInt();
-        System.out.print("Digite o Y: ");
-        int y = input.nextInt();
+        int alcool = 0;
+        int gasolina = 0;
+        int diesel = 0;
 
-        while (x != 0 && y != 0) {
+        System.out.println("""
+                [1]- ÁLCOOL
+                [2]- GASOLINA
+                [4]- SAIR
+                """);
+        System.out.print("DIGITE O COOMBUSTIVEL: ");
+        int tipo = input.nextInt();
 
+        while (tipo != 4) {
 
-            if (x > 0 && y > 0) {
-                System.out.println("primeiro");
-            } else if (x > 0 && y < 0) {
-                System.out.println("quarto");
-            } else if (x < 0 && y < 0) {
-                System.out.println("terceiro");
-            } else {
-                System.out.println("segundo");
+            if (tipo == 1) {
+
+                alcool++;
+            }else if (tipo == 2) {
+                gasolina++;
             }
-
-            System.out.print("Digite o X: ");
-            x = input.nextInt();
-            System.out.print("Digite o Y: ");
-            y = input.nextInt();
-
+            else if (tipo == 3) {
+                diesel++;
+            }else if (tipo > 4 || tipo < 1) {
+                System.out.print("NUMERO INVALIDO, DIGITE NOVAMENTE");
+                tipo = input.nextInt();
+            }
+            System.out.println("""
+                [1]- ÁLCOOL
+                [2]- GASOLINA
+                [4]- SAIR
+                """);
+            System.out.print("DIGITE O COOMBUSTIVEL: ");
+            tipo = input.nextInt();
         }
+        System.out.printf("""
+                MUITO OBRIGADO
+                alcool : %d
+                gasolina : %d
+                diesel : %d
+                """,  alcool, gasolina, diesel);
     }
+
 }
