@@ -17,6 +17,6 @@ public class Main {
             senha = input.nextInt();
         }
 
-        System.out.println("Senha correta");
+        System.out.println("Senha Correta");
     }
 }
