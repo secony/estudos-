@@ -4,7 +4,7 @@ public class Main {
 
     static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("digite 3 numeros: ");
+        System.out.println("Digite 3 numeros: ");
         int a = sc.nextInt();
         int b = sc.nextInt();
         int c = sc.nextInt();
