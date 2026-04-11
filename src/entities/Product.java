@@ -14,4 +14,8 @@ public class Product {
     public void  subProdutcts(int quantity){
         this.quantity -= quantity;
     }
+
+    public String toString(){
+        return "Product Name: " + name + ", Price: R$" + price + ", Quantity: " + quantity + ", Total: R$" + totalValueInEstoque();
+    }
 }
