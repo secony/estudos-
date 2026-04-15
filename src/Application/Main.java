@@ -6,35 +6,31 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
+
+    public static final double PI = 3.14;
+
     public static void main(String[] args) {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        Aluno aluno = new Aluno();
 
-        String pass = "";
-        double faltante = 0;
+        System.out.print("Digite o raio: ");
+        double raio = sc.nextDouble();
 
-        System.out.println("Digite o nome do aluno: ");
-        aluno.nome = sc.nextLine();
-        System.out.println("Digite a nota do primeiro, segundo e terceriro bimestre: ");
-        aluno.primeiroBi = sc.nextDouble();
-        aluno.segundoBi = sc.nextDouble();
-        aluno.terceiroBi = sc.nextDouble();
+        double c = circunferencia(raio);
+        double v = volume(raio);
 
-        System.out.println(aluno.notaAno());
-
-        if (aluno.notaAno() < 60) {
-            pass = "Reprovado";
-            faltante = aluno.missingPoints();
-            System.out.println(pass +"\nFaltou: " + faltante + " pontos.");
-        }else {
-            pass = "Aprovado";
-            System.out.println(pass);
-        }
-
-
+        System.out.println(c);
+        System.out.println(v);
+        System.out.println(PI);
 
         sc.close();
+    }
+
+    public static double circunferencia(double raio) {
+        return raio * 2 * PI;
+    }
+    public static double volume(double raio) {
+        return (4 * PI * Math.pow(raio, 3) ) / 3;
     }
 }
