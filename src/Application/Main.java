@@ -1,35 +1,21 @@
 
 package Application;
-import entities.Carro;
-import java.util.Locale;
+import entities.Cotacao;
 
+import java.util.Scanner;
 public class Main {
-
     public static void main(String[] args) {
-        Locale.setDefault(Locale.US);
+        Scanner input = new Scanner(System.in);
+        Cotacao cotacao = new Cotacao();
 
-        Carro car = new Carro();
-        Carro car2 = new Carro();
-        Carro car3 = new Carro();
+        System.out.println("Valor do dolar: ");
+        cotacao.dolarPrice = input.nextDouble();
 
-        car.ano = 2000;
-        car.marca = "Fiat";
-        car.modelo = "Uno";
+        System.out.println("Quantos dolares: ");
+        cotacao.dolarQuant = input.nextDouble();
 
-        car2.marca = "Mercedes";
-        car2.modelo = "C200";
-        car2.ano = 2020;
-
-        car3.marca = "Chevrolet";
-        car3.modelo = "Astra";
-        car3.ano = 2011;
-
-        System.out.println(car);
-        System.out.println(car2);
-        System.out.println(car3);
+        System.out.println("Valor do reais: "+ cotacao.convercao(cotacao.dolarPrice, cotacao.dolarQuant, cotacao.reais));
 
 
     }
-
-
 }
