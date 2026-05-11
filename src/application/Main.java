@@ -27,7 +27,9 @@ public class Main {
         for (int i = 0; i < n; i++) {
             sum += altura[i];
         }
-        System.out.println(sum);
+        double media = sum/n;
+
+        System.out.println(media);
     }
 
 }
