@@ -38,7 +38,7 @@ public class Main {
         }
 
         System.out.println("Pessoas menor de 16: " + pessoasMenor16);
-        System.out.println("media: "+ media);
+        System.out.printf("media: %2.f%n ", media);
     }
 
 }
